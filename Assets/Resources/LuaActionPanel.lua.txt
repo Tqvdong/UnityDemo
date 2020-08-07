@@ -1,0 +1,46 @@
+LuaActionPanel={}
+local  this = LuaActionPanel;
+
+local UnityEngine = CS.UnityEngine;
+
+local m_actionText;
+local m_actionItem;
+local m_parent;
+
+function this.Awake()
+    print("ccc");
+    m_actionText = UnityEngine.GameObject.Find("ActionText"):GetComponent("Text");
+    m_actionItem = UnityEngine.GameObject.Find("ItemPanel/ActionItem");
+    m_parent = UnityEngine.GameObject.Find("ItemPanel").transform;
+end
+
+
+function  this.Start()
+    m_actionText.text = "";
+    local item1 = UnityEngine.GameObject.Instantiate(m_actionItem);
+    item1.transform:SetParent(m_parent);
+    this.AddItem(item1.transform, 0, "","");
+
+    local item2 = UnityEngine.GameObject.Instantiate(m_actionItem);
+    item2.transform:SetParent(m_parent);
+    this.AddItem(item1.transform, 1, "","");
+end
+
+
+function this.AddItem(itemTrans,index,title,content)
+    m_titleText = itemTrans:Find("TitleText"):GetComponent("Text");
+	m_contentText = itemTrans:Find("ContentText"):GetComponent("Text");
+	m_btn = itemTrans:Find("Button"):GetComponent("Button");
+ 
+	m_titleText.text = title;
+    m_contentText.text = content;
+	m_btn.onClick:AddListener(function()
+		print("index:"..index);
+	end);
+
+	itemTrans.localPosition = UnityEngine.Vector3(150 + index * 230, 0, 0);
+    itemTrans.localScale = UnityEngine.Vector3.one;
+ 
+	itemTrans.gameObject:SetActive(true);
+
+end

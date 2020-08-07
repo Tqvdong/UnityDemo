@@ -1,0 +1,13 @@
+CS.UnityEngine.Debug.Log('hello world1')
+
+a = 10
+t = {a = 1,b = 2}
+function addfun(a,b)
+     return a + b
+end
+
+function update()
+ local cube = CS.UnityEngine.GameObject.Find("Cube")
+ cube.transform.position = CS.UnityEngine.Vector3.one;
+ cube.transform.position = CS.UnityEngine.Vector3(2,2,2);
+end

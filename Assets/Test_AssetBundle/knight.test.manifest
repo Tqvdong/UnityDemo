@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 200753416
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dbdaaa185685c2ac773e9c566b6275ee
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bbd16ac2e93bb41d13e7b197010cf199
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/XLua/Examples/08_Hotfix/Cube.prefab
+- Assets/Resources/CoingStudio/Coing's SD/knight/Knight.FBX
+Dependencies: []
